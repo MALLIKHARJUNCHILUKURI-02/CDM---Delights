@@ -2,6 +2,7 @@ import express, { response }  from "express";
 import axios from "axios";
 import pg from "pg";
 import bodyParser  from "body-parser";
+import nodemailer from "nodemailer";
 
 const app = express();
 const port = 3000;
@@ -23,6 +24,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
+const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+        user: "mkreddychilukuri075@gmail.com", // Replace with your email
+        pass: "kczvdgakprkdfmna" // Replace with your email password or app password
+    }
+});
 
 //Get Main Page
 app.get("/", async (req,res) =>{
@@ -37,7 +45,7 @@ app.get("/menu", async (req, res) =>{
 });
 
 app.get("/profile", async (req, res) =>{
-    res.render("login.ejs")
+    res.render("profile.ejs")
 })
 
 
@@ -61,7 +69,8 @@ app.post("/login", async (req, res) => {
         if (userdetails && userdetails.email === email) {
             console.log(`User Details From Database : ${userdetails.email}`);
             // Redirecting properly or rendering the homepage with data
-            res.render("index", {emailtitle: 'Email Id : ',usernametitle: 'User Name : ',useridtitie: 'User Id : CDM' ,emailid: email, username: user_name, userid:userdetails.id});
+            res.render("profile.ejs", {useridtitie: 'CDM' ,emailid: email, username: user_name, userid:userdetails.id});
+            res.render("index.ejs", {useridtitie: 'CDM' , userid:userdetails.id});
         } else {
             res.render("login", { response: 'User details not found, try again' });
         }
@@ -142,10 +151,33 @@ app.post("/edit/:id", async (req, res) => {
     res.redirect("/");
 });
 
+
 // ❌ Delete - Remove Menu Item
 app.post("/delete/:id", async (req, res) => {
     await db.query("DELETE FROM menu WHERE id = $1;", [req.params.id]);
     res.redirect("/");
+});
+
+
+app.post("/submit", (req, res) => {
+    const { name, email, message } = req.body;
+
+    const mailOptions = {
+        from: email,
+        to: "mkreddychilukuri075@gmail.com", // Replace with your email where you want to receive messages
+        subject: `New Message from ${name}`,
+        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error("Error sending email:", error);
+            res.send("Failed to send email. Please try again.");
+        } else {
+            console.log("Email sent: " + info.response);
+            res.send("Email sent successfully! Thank you for your feedback.");
+        }
+    });
 });
 
 

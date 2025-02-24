@@ -24,17 +24,7 @@
                     <li> <a href="#events" id="events_nav">EVENTS</a> </li>
                     <li> <a href="#contact" id="contact_nav">CONTACT</a> </li>
                     <li> <a href="/profile">Profile</a></li>
-                    <div class="locals">
-                        <li class="localemail">
-                           <%= locals.emailtitle %> <%= locals.emailid %>
-                        </li>
-                        <li class="localuser">
-                            <%= locals.usernametitle %> : <%= locals.username %>
-                        </li>
-                        <li class="localsuserid">
-                            <%= locals.useridtitie %><%= locals.userid %>
-                        </li>
-                    </div>
+                    <p><%= locals.useridtitie %><%= locals.userid %></p>
                 </ul>
                 
             </nav>
@@ -220,15 +210,16 @@
 
             <section class="contact" id="contact">
                 <h2>Contact Us</h2>
-                <form action="submit">
+                <form action="/submit" method="POST">
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name">
-
+                    <input type="text" name="name" id="name" required>
+            
                     <label for="email">Email</label>
-                    <input type="text" name="email" id="email">
-
+                    <input type="email" name="email" id="email" required>
+            
                     <textarea id="message" name="message" placeholder="Write your feedback here..." required></textarea>
-                    <button type="button">SUBMIT</button>
+                    
+                    <button type="submit">SUBMIT</button>
                 </form>
             </section>
 

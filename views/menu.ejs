@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="/styles/menu.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,23 +12,32 @@
 
     <title>CDM - Restaurant Menu</title>
 </head>
+
 <body>
     <h1>CDM Restaurant Menu</h1>
     <a class="add" href="/add">Add New Item</a>
+    <a class="menuhome" href="/">Home</a>
     <ul class="menu">
-        <% menuItems.forEach(item => { %>
+        <% menuItems.forEach(item=> { %>
             <li>
-                <strong><%= item.name %></strong> <span>  <%= item.category %> - ₹<%= item.price %></span><br>
-                <em><%= item.description %></em><br>
+                <strong>
+                    <%= item.name %>
+                </strong> <span>
+                    <%= item.category %> - ₹<%= item.price %>
+                </span><br>
+                <em>
+                    <%= item.description %>
+                </em><br>
                 <div class="edit_delete">
                     <form action="/delete/<%= item.id %>" method="POST" style="display:inline;">
                         <button type="submit">Delete</button>
                     </form>
                     <a href="/edit/<%= item.id %>">Edit</a>
                 </div>
-                
+
             </li>
-        <% }) %>
+            <% }) %>
     </ul>
 </body>
+
 </html>

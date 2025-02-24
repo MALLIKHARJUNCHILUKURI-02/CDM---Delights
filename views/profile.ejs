@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/profile copy.css">
     <title>Profile</title>
 </head>
+
 <body>
-    
-    <main>
+    <main id="/profile">
+        <div class="profilehome">
+            <a href="/">Home</a>
+        </div>
+        
+        <section class="hero">
+            <img src=" <%= locals.image %> " alt="Profile Image">
 
-        <section class="login">
-            <h1>Login</h1>
-
-            <form action="/login" method="post">
-                <p>If You Dont Have Account <a href="/signup">Signup</a></p>
-
-                <label for="user_name">User Name</label>
-                <input type="text" name="user_name" id="user_name" required>
-
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" required>
-
-                <label for="password">Password</label>
-                <input type="text" name="password" id="password" required>
-
-                <label for="reEnterPassword">Re Enter Password</label>
-                <input type="text" name="reEnterPassword" id="reEnterPassword" required>
-
-                <label for="address">Address</label>
-                <input type="text" name="address" id="address" required>
-
-                <label for="mobile">Mobile Number</label>
-                <input type="text" name="mobile" id="mobile" required>
-
-            </form>
+            <a href="/upload">Upload Image</a>
         </section>
 
+        <section class="heroDetails">
+            <div class="name">
+                <h1>User Name</h1>
+                <p>
+                     <%= locals.username %>
+                </p>
+            </div>
+
+            <div class="email">
+                <h2>User Email</h2>
+                <p><%= locals.emailid %>
+                </p>
+            </div>
+
+            <div class="userId">
+                <h2>User Id</h2>
+                <p><%= locals.useridtitie %><%= locals.userid %>
+                </p>
+            </div>
+
+            <div class="userOrders">
+                <a href="" target="_blank" rel="noopener noreferrer">My Orders</a>
+                <a href="" target="_blank" rel="noopener noreferrer">My Payment History</a>
+            </div>
+
+
+            <div class="userliginsignup">
+                <a href="/login">Login</a>
+
+                <a href="/signup">Signup</a>
+            </div>
+        </section>
     </main>
-
-
 </body>
+
 </html>
