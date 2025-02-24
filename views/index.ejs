@@ -1,0 +1,238 @@
+<%- include('partials/header.ejs') -%>
+
+
+    <body>
+
+        <main>
+
+            <nav>
+                <div class="resp">
+                    <h1 class="cdmres">C D M</h1>
+                    <svg class="menu_icon" id="menu_icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="white" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </div>
+
+                <ul class="listitems" id="listitems">
+                    <li> <a href="#home" id="home_nav">HOME</a> </li>
+                    <li> <a href="#about" id="about_nav">ABOUT</a> </li>
+                    <li> <a href="/menu" id="menu_nav">MENU</a> </li>
+                    <li class="cdm" id="cdm_nav"> C D M </li>
+                    <li> <a href="#gallery" id="gallery_nav">GALLERY</a> </li>
+                    <li> <a href="#events" id="events_nav">EVENTS</a> </li>
+                    <li> <a href="#contact" id="contact_nav">CONTACT</a> </li>
+                    <li> <a href="/profile">Profile</a></li>
+                    <div class="locals">
+                        <li class="localemail">
+                           <%= locals.emailtitle %> <%= locals.emailid %>
+                        </li>
+                        <li class="localuser">
+                            <%= locals.usernametitle %> : <%= locals.username %>
+                        </li>
+                        <li class="localsuserid">
+                            <%= locals.useridtitie %><%= locals.userid %>
+                        </li>
+                    </div>
+                </ul>
+                
+            </nav>
+
+            <section class="home" id="home">
+
+                <div class="hero">
+                    <h1>CDM Restaurant</h1>
+                    <p>In the heart of the city, amidst the vibrant streets and lively atmosphere, CDM Restaurant offers
+                        a
+                        delightful dining experience where flavors come alive, and every meal tells a story.</p>
+
+                    <a href="">RESERVE A TABLE</a>
+                </div>
+            </section>
+
+            <section class="about" id="about">
+                <div class="aboutimg1 aboutcard">
+                    <img class="aboutimg" src="images/fried_eggs.jpg" alt="fried eggs" srcset="">
+                </div>
+
+                <div class="aboutimg2 aboutcard">
+                    <img class="aboutimg" src="images/chiken.avif" alt="chiken">
+                </div>
+
+                <div class="about_card_des aboutcard">
+                    <h2>The Restaurant</h2>
+                    <p>CDM Restaurant blends taste and ambiance in the heart of the city, serving fresh, global flavors
+                        for
+                        a delightful experience. With a cozy setting and exceptional service, every meal is a
+                        celebration.
+                    </p>
+
+                    <a href="">SEE OUR MENU</a>
+                </div>
+
+            </section>
+
+
+            <section class="story_of_cdm">
+                <div class="behindcdm">
+                    <h2>
+                        Our Story: The Heart Behind CDM
+                    </h2>
+
+                    <p>
+                        At CDM, every dish tells a story—a story of family, tradition, and a shared passion for great
+                        food.
+                        Our
+                        journey began with two brothers, <strong>Durga Prasad Reddy</strong> and <strong>Mallikharjun
+                            Reddy</strong>, carrying forward the legacy of our
+                        family name, <strong>Chilukuri</strong>. Growing up, the kitchen was more than just a place for
+                        cooking;
+                        it was where
+                        bonds were strengthened, traditions were honored, and flavors came to life.
+
+                        From childhood, we were captivated by the art of food—watching our family prepare meals with
+                        love,
+                        experimenting with spices, and serving dishes that brought smiles to everyone’s faces. This
+                        deep-rooted
+                        connection with food led us to dream of a place where people could come together, enjoy
+                        authentic
+                        flavors, and create lasting memories. That dream became <strong>CDM</strong>.
+
+                        At CDM, we don’t just serve food—we serve experiences. Every recipe is crafted with fresh
+                        ingredients, a
+                        touch of tradition, and a lot of love. Whether you're here for a cozy family dinner, a
+                        celebration,
+                        or
+                        just to satisfy your cravings, we promise a meal that warms your heart as much as it delights
+                        your
+                        taste
+                        buds.
+
+                        Come, be a part of our story. Welcome to <strong>CDM</strong>—where food is family! 🍽️✨
+
+
+                    </p>
+                </div>
+
+            </section>
+
+
+            <section class="cdm-restaurant-description">
+                <div class="inner_cdm-restaurant-description">
+                    <h2>Savor the Flavor, Nourish Your Soul</h2>
+                    <p>Nestled in the heart of the city, CDM Restaurant brings you a delightful fusion of taste and
+                        health.
+                        Our carefully crafted dishes blend rich flavors with wholesome ingredients, ensuring every bite
+                        is
+                        both delicious and nutritious. Experience the perfect balance of indulgence and well-being with
+                        every meal!</p>
+                </div>
+            </section>
+
+
+            <section class="gallery" id="gallery">
+                <h2>Gallery</h2>
+
+                <div class="gallerygrid">
+                    <img class="img1 gridimg" src="images/crilledchickenbreadpiece.jpg"
+                        alt="crilled chicken bread piece">
+                    <img class="img2 gridimg" src="images/meatsoup.jpg" alt="meatsoup">
+                    <img class="img6 gridimg" src="images/italianpasta.jpg" alt="italian pasta">
+                    <img class="img4 gridimg" src="images/tastypizza.jpg" alt="tastypizza">
+                    <img class="img5 gridimg" src="images/friedpotatoes.avif" alt="friedpotatoes">
+                    <img class="img3 gridimg" src="images/crispytubtimfishsalad.avif" alt="crispy tubtim fish salad">
+                    <img class="img7 gridimg" src="images/linedishes.jpg" alt="linedishes">
+                    <img class="img8 gridimg" src="images/palakpaneercurryricechapati.jpg"
+                        alt="palak paneer curry rice chapati">
+                    <img class="img9 gridimg" src="images/friedonioncarrottomato.avif" alt="fried onion carrot tomato">
+                    <img class="img10 gridimg" src="images/rawchickenboard.jpg" alt="fried onion carrot tomato">
+                </div>
+            </section>
+
+
+            <section class="testimonials ">
+                <h2>Testimonials</h2>
+
+                <div class="testimonials_people">
+
+                    <div class="testimonials_card1 tstcard">
+                        <img src="images/charansai.jpg" alt="" srcset="">
+                        <h4>Charan Sai</h4>
+                        <p>CDM offers an amazing dining experience!
+                            The food is delicious, and the ambiance is just perfect.
+                            Highly recommend it to everyone!</p>
+                    </div>
+                    <div class="testimonials_card2 tstcard">
+                        <img src="images/naveen.jpg" alt="">
+                        <h4>Naveen</h4>
+                        <p>Absolutely loved the flavors and the hospitality.
+                            CDM is my go-to place for great food.
+                            Every dish feels like a masterpiece!</p>
+                    </div>
+                    <div class="testimonials_card3 tstcard">
+                        <img src="images/sameer.jpg" alt="">
+                        <h4>Sameer</h4>
+                        <p>The best restaurant in town!
+                            Their service and food quality are top-notch.
+                            Can’t wait to visit again!</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="events" id="events">
+                <h2>Events</h2>
+
+                <div class="event_cards">
+
+                    <div class="card1 event_card">
+                        <h3>Chef’s Special Night</h3>
+                        <img src="images/chefsspecialnight.jpg" alt="">
+                        <ul>
+                            <li>Indulge in a one-night-only menu featuring exclusive chef-curated dishes.</li>
+                            <li>Discover unique flavors crafted with passion and expertise.</li>
+                            <li>A must-try experience for true food lovers!</li>
+                        </ul>
+                    </div>
+                    <div class="card2 event_card">
+                        <h3>Live Music & Dinner</h3>
+                        <img src="images/restauranthallwithsmallstagemonitor.jpg" alt="">
+                        <ul>
+                            <li>Savor delicious food while enjoying live performances by talented artists.</li>
+                            <li>A perfect ambiance for a relaxing and memorable evening.</li>
+                            <li>Let the music and flavors create an unforgettable experience!</li>
+                        </ul>
+                    </div>
+                    <div class="card3 event_card">
+                        <h3>Mystery Dish Challenge</h3>
+                        <img src="images/peas-plate.jpg" alt="">
+                        <ul>
+                            <li>Order a surprise dish and guess the secret ingredients.</li>
+                            <li>Win special discounts and surprises for correct guesses.</li>
+                            <li>A fun and exciting challenge for adventurous foodies!</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="contact" id="contact">
+                <h2>Contact Us</h2>
+                <form action="submit">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+
+                    <textarea id="message" name="message" placeholder="Write your feedback here..." required></textarea>
+                    <button type="button">SUBMIT</button>
+                </form>
+            </section>
+
+        </main>
+
+
+        <%- include('partials/footer.ejs') -%>

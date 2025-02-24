@@ -1,0 +1,36 @@
+<%- include("partials/header.ejs") %>
+
+<section class="login">
+    <h1>Sign Up</h1>
+
+    <form action="/signup" method="post">
+        <p>If You Dont Have Account <a href="/login">Signup</a></p>
+
+        <label for="user_name">User Name</label>
+        <input type="text" name="user_name" id="user_name" required>
+        <p id="user_name_taken"><%= locals.nameresponse %></p>
+
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" required>
+        <p id="email_already_regestered"><%= locals.emailresponse %></p>
+
+
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password" required>
+
+        <label for="reEnterPassword">Re Enter Password</label>
+        <input type="text" name="reEnterPassword" id="reEnterPassword" required>
+        <p id="reenterespassword"><%= locals.repassword %></p>
+
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" required>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="text" name="mobile" id="mobile" required>
+
+        <button type="submit">Regester User</button>
+    </form>
+</section>
+
+
+<%- include("partials/footer.ejs") %>

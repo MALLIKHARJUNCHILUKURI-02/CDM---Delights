@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/styles/menu.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <title>CDM - Restaurant Menu</title>
+</head>
+<body>
+    <h1>CDM Restaurant Menu</h1>
+    <a class="add" href="/add">Add New Item</a>
+    <ul class="menu">
+        <% menuItems.forEach(item => { %>
+            <li>
+                <strong><%= item.name %></strong> <span>  <%= item.category %> - ₹<%= item.price %></span><br>
+                <em><%= item.description %></em><br>
+                <div class="edit_delete">
+                    <form action="/delete/<%= item.id %>" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                    <a href="/edit/<%= item.id %>">Edit</a>
+                </div>
+                
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>
