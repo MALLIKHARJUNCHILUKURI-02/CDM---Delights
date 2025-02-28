@@ -1,10 +1,15 @@
+<%- include('partials/header.ejs') -%>
 
-<h1>Edit Menu Item</h1>
-<form action="/edit/<%= item.id %>" method="POST">
-    <input type="text" name="name" value="<%= item.name %>" required><br>
-    <input type="text" name="category" value="<%= item.category %>" required><br>
-    <input type="number" name="price" value="<%= item.price %>" step="0.01" required><br>
-    <textarea name="description"><%= item.description %></textarea><br>
-    <button type="submit">Update Item</button>
-    <a href="/">Back to Menu</a>
-</form>
+    <div class="edititem">
+        <h1>Edit Menu Item</h1>
+        <form action="/edit/<%= item.id %>" method="POST">
+            <input type="text" name="name" value="<%= item.name %>" required><br>
+            <input type="text" name="category" value="<%= item.category %>" required><br>
+            <input type="number" name="price" value="<%= item.price %>" step="0.01" required><br>
+            <textarea name="description"><%= item.description %></textarea><br>
+            <button type="submit">Update Item</button>
+            <a href="/">Back to Menu</a>
+        </form>
+    </div>
+
+    <%- include('partials/footer.ejs') -%>

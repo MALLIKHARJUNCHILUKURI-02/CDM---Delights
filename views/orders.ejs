@@ -1,0 +1,25 @@
+<%- include('partials/header.ejs') -%>
+
+<div class="order">
+    <div class="orderdetails">
+        <h1> <%= item.name %> </h1>
+        <h2> Ordered by: <%= userName %> </h2>
+        <p> Email Id: <%= userEmail %></p>
+        <p> Price: ₹<%= item.price %> </p>
+
+
+      
+        <form action="/place-order/<%= item.id %>" method="POST">
+            <input type="hidden" name="name" value="<%= item.name %>">
+            <input type="hidden" name="useremail" value="<%= userEmail %>">
+            <input type="hidden" name="username" value="<%= userName %>">
+            <input type="hidden" name="price" value="<%= item.price %>">
+    
+            <input type="number" name="orderQuantity" placeholder="Number Of Items" step="1" required><br>
+            <!-- <button type="submit">Place Order</button> -->
+            <input class="btn btn-primary" type="submit" value="Place Order">
+        </form>
+    </div>
+</div>
+
+<%- include('partials/footer.ejs') -%>

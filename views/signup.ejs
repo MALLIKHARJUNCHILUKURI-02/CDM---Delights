@@ -1,18 +1,18 @@
 <%- include("partials/header.ejs") %>
 
-<section class="login">
+<section class="signup">
     <h1>Sign Up</h1>
 
     <form action="/signup" method="post">
-        <p>If You Dont Have Account <a href="/login">Signup</a></p>
+        <p class="mt-5">If You Have an Account <a href="/login">Login</a></p>
 
-        <label for="user_name">User Name</label>
-        <input type="text" name="user_name" id="user_name" required>
-        <p id="user_name_taken"><%= locals.nameresponse %></p>
+        <label for="username">User Name</label>
+        <input type="text" name="username" id="username" required>
+        <p id="user_name_taken" class="text-danger"><%= locals.nameresponse %></p>
 
         <label for="email">Email</label>
         <input type="text" name="email" id="email" required>
-        <p id="email_already_regestered"><%= locals.emailresponse %></p>
+        <p id="email_already_regestered" class="text-danger"><%= locals.emailresponse %></p>
 
 
         <label for="password">Password</label>
@@ -20,7 +20,7 @@
 
         <label for="reEnterPassword">Re Enter Password</label>
         <input type="text" name="reEnterPassword" id="reEnterPassword" required>
-        <p id="reenterespassword"><%= locals.repassword %></p>
+        <p id="reenterespassword" class="text-danger"><%= locals.repassword %></p>
 
         <label for="address">Address</label>
         <input type="text" name="address" id="address" required>
@@ -28,7 +28,8 @@
         <label for="mobile">Mobile Number</label>
         <input type="text" name="mobile" id="mobile" required>
 
-        <button type="submit">Regester User</button>
+        <!-- <button type="submit">Regester User</button> -->
+        <button class="btn btn-primary mt-5 fs-2" type="submit">Regester User</button>
     </form>
 </section>
 

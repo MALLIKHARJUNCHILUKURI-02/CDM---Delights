@@ -76,12 +76,12 @@ h2{
     color: white;
 }
 
-.userliginsignup{
+.userloginsignup{
     display: flex;
     padding: 20px;
 }
 
-.userliginsignup a{
+.userloginsignup a{
     margin-left: 20px;
     color: white;
 }

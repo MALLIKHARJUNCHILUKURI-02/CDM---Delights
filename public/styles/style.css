@@ -391,7 +391,7 @@ strong {
     margin-top: 50px;
 }
 
-.events>h2 {
+.events > h2 {
     font-family: "Abel", serif;
     font-weight: 900;
     letter-spacing: 2px;
@@ -435,9 +435,11 @@ strong {
     line-height: 2rem;
 }
 
-form {
+.contact form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 80%;
     margin: auto;
 }
@@ -450,11 +452,20 @@ form {
     margin-top: 30px;
 }
 
-.contact>h2 {
+.contact > h2 {
     font-family: "Abel", serif;
     font-weight: 900;
     letter-spacing: 2px;
     font-size: 3rem;
+}
+
+
+.contact label{
+    width: 80%;
+}
+
+.contact input{
+    width: 80%;
 }
 
 label {
@@ -471,6 +482,7 @@ input {
     font-weight: 400;
     letter-spacing: 2px;
     margin-top: 10px;
+    padding: 10px;
 }
 
 textarea {
@@ -481,9 +493,10 @@ textarea {
     font-size: 2rem;
     border: 2px solid green;
     border-radius: 12px;
+    padding: 10px;
 }
 
-button {
+/* .contact button {
     width: 80%;
     margin: auto;
     margin-top: 10px;
@@ -497,16 +510,18 @@ button {
     color: white;
     border-radius: 12px;
     text-align: center;
-}
-
+} */
+/* 
 button:hover {
     background-color: black;
     color: green;
     font-weight: 900;
-}
+} */
+
 .locals{
     color: white;
 }
+
 footer {
     border-top: 2px solid black;
     margin-top: 50px;
@@ -521,7 +536,112 @@ footer {
     font-size: 1.5rem;
 }
 
+.login{
+    text-align: center;
+}
 
+
+.signup{
+    text-align: center;
+}
+
+.login form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 650px;
+}
+
+.login input{
+    width: 80%;
+    border: 2px solid blue;
+}
+
+.signup form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: auto;
+}
+
+.signup input{
+    width: 80%;
+    border: 2px solid blue;
+}
+
+.addnewitem{
+    width: 70%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.edititem{
+    width: 70%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.order{
+    background-color: gray;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 650px;
+}
+
+.orderdetails{
+    background-color: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px rgb(205, 118, 118);
+}
+
+.myorders{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 650px;
+}
+
+.allorders{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.allorders li{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(237, 237, 237);
+    padding: 30px;
+    height: 200px;
+    border-radius: 12px;
+}
 @media screen and (max-width: 950px) {
     .gallerygrid {
         display: flex;
@@ -610,6 +730,16 @@ footer {
     .gallerygrid {
         margin: 10px 0;
     }
+
+    
+.login{
+    width: 100%;
+}
+
+.signup{
+    width: 100%;
+}
+
 }
 
 @media screen and (max-width: 450px) {

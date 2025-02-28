@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs') -%>
+
+<div class="myorders">
+    <h1> My Orders</h1>
+    <div class="allorders">
+        <% ordersItem.forEach(item => { %>
+
+            <li>
+                <strong>
+                    <%= item.item_name %>
+                </strong>
+
+                <small> Price: <%= item.price %> </small>
+                <small>Order ID:  <%= item.order_id %> </small>
+                <small>Date: <%= item.order_date.toLocaleString() %></small>
+            </li>
+            <% }) %>
+    </div>
+</div>
+
+
+<%- include('partials/footer.ejs') -%>
